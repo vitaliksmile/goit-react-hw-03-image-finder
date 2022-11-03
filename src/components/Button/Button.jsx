@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from '../../styles/styles.module.css';
 const Button = ({ updatePage }) => {
   return (
@@ -8,3 +9,6 @@ const Button = ({ updatePage }) => {
 };
 
 export default Button;
+Button.propTypes = {
+  updatePage: PropTypes.func.isRequired,
+};

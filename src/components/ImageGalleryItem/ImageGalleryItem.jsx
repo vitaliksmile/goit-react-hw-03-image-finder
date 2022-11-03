@@ -1,14 +1,5 @@
 import s from '../../styles/styles.module.css';
-// const ImageGalleryItem = ({ title, url }) => {
-//   return (
-//     <li className={s.ImageGalleryItem}>
-//       <img className={s.ImageGalleryItemImage} src={url} alt={title} />
-//     </li>
-//   );
-// };
-
-// export default ImageGalleryItem;
-
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 
 class ImageGalleryItem extends Component {
@@ -28,3 +19,10 @@ class ImageGalleryItem extends Component {
 }
 
 export default ImageGalleryItem;
+ImageGalleryItem.propTypes = {
+  image: PropTypes.shape({
+    largeImageURL: PropTypes.string.isRequired,
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }).isRequired,
+};

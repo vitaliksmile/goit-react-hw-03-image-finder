@@ -1,8 +1,9 @@
-import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import s from '../../styles/styles.module.css';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import Button from 'components/Button/Button';
 import searchNewApi from 'utils/newsAPI';
+import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import Loader from 'components/Loader/Loader';
 import Modal from 'components/Modal/Modal';
 
@@ -76,3 +77,6 @@ class ImageGallery extends Component {
 }
 
 export default ImageGallery;
+ImageGallery.propTypes = {
+  query: PropTypes.string.isRequired,
+};
