@@ -22,7 +22,7 @@ class ImageGallery extends Component {
     if (nextProps.query !== state.query) {
       return { page: 1, query: nextProps.query };
     }
-    return state; // {page: 1}
+    return state;
   }
 
   componentDidUpdate(prevProps, prevState) {
